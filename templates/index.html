@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PhishGuard AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">🛡</div>
+
+    <h1>PhishGuard AI</h1>
+
+    <p class="subtitle">
+        AI-based Cybersecurity Phishing Detection System
+    </p>
+
+    <form method="POST">
+
+        <textarea
+            name="message"
+            placeholder="Paste suspicious email, SMS, or URL here..."
+            required></textarea>
+
+        <br>
+
+        <button type="submit">
+            Analyze Threat
+        </button>
+
+    </form>
+
+    {% if result %}
+    <div class="result">
+        {{ result }}
+    </div>
+    {% endif %}
+
+    <div class="footer">
+        Cybersecurity Project | Hackathon Demo
+    </div>
+
+</div>
+
+</body>
+</html>
